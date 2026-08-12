@@ -1,0 +1,19 @@
+[project]
+name = "inventorymanagementapi"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "aiosqlite>=0.21.0",
+    "asynco>=0.0.5",
+    "fastapi>=0.141.1",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.7.0",
+    "pytest>=9.1.1",
+    "sqlalchemy>=2.0.51",
+    "uvicorn>=0.34.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2>=0.1.0",
+]
