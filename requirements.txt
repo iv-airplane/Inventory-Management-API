@@ -1,0 +1,11 @@
+aiosqlite
+asynco
+bcrypt
+pytest
+fastapi
+pydantic
+pydantic-settings
+python-jose[cryptography]
+python-multipart
+sqlalchemy
+uvicorn
