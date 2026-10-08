@@ -1,3 +1,3 @@
-from app.crud import item
+from app.crud import item, user
 
-__all__ = ["item"]
+__all__ = ["item", "user"]
