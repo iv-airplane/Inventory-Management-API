@@ -5,7 +5,7 @@ website, built with FastAPI, SQLAlchemy (async), and Pydantic.
 
 ## Written Spec
 
-Develop an application that allows administrators to manage the product catalog.
+Develop an application that allows administrators to manage the product catalog and users to view the catalog.
 
 The application shall:
 
@@ -14,6 +14,17 @@ The application shall:
 * Retrieve a single item from a catalog
 * Mark item as in-stock
 * Delete an item from a catalog
+* Users to view an item
+
+Please see the table for allowed actions per user below
+
+| Action               | Required role              |
+|----------------------|----------------------------|
+| GET /items | any logged-in user         | 
+|  GET /items/{id}     |            any logged-in user                 |
+| POST /items (create an item) | admin                      | 
+| PATCH /items/{id}/restock | admin                      | 
+| DELETE /items/{id}   | admin                      | 
 
 ## Requirements
 

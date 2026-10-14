@@ -52,3 +52,12 @@ def test_login_unknown_email(client: TestClient):
     )
 
     assert response.status_code == 401
+
+
+def test_register_admin(client: TestClient):
+    response = client.post(
+        "/auth/register",
+        json={"email": "boss@a.com", "password": "pw12345", "role": "admin"},
+    )
+    assert response.status_code == 201
+    assert response.json()["role"] == "admin"

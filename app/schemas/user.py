@@ -5,9 +5,14 @@ from app.models.user import Role
 
 # Request body for POST /auth/register. Plaintext password in, never stored
 # or returned as-is -- it gets hashed before reaching the User model.
+#
+# TEMPORARY: `role` is client-supplied so several admins can be created while
+# testing. This lets anyone self-register as admin -- replace with a seeded
+# admin / admin-only promotion endpoint before real use.
 class UserCreate(BaseModel):
     email: str
     password: str
+    role: Role = Role.user
 
 
 # Response body for user-related endpoints. Deliberately has no password
